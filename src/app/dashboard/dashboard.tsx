@@ -1,7 +1,19 @@
-import React from 'react';
+"use client";
 
-const Dashboard: React.FC = () => {
-  return <h1>You have enter into my dashboard</h1>;
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/nextjs";
+
+export default function Dashboard() {
+  return (
+    <>
+      <SignedIn>
+        <div className="p-8">
+          <h1 className="text-2xl font-bold">Welcome to your dashboard!</h1>
+        </div>
+      </SignedIn>
+
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
+  );
 }
-
-export default Dashboard;

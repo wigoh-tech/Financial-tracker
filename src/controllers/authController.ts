@@ -17,7 +17,7 @@ export async function registerUser({ email, password, userName, }: { email: stri
       },
     });
   
-    const token = signJwt({ userId: user.id });
+    const token = signJwt(Number(user.id), { userId: user.id });
     return { token };
   }
 
@@ -26,6 +26,6 @@ export async function registerUser({ email, password, userName, }: { email: stri
     if (!user || !(await bcrypt.compare(password, user.password))) {
       throw new Error('Invalid credentials');
     }
-    const token = signJwt({ userId: user.id });
+    const token = signJwt(Number(user.id), { userId: user.id });
     return { token };
   }

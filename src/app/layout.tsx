@@ -1,18 +1,20 @@
-import React, { ReactNode } from 'react';
+import { ClerkProvider } from "@clerk/nextjs";
+import { Inter } from "next/font/google";
+import "./globals.css";
+const inter = Inter({ subsets: ["latin"] });
 
-interface LayoutProps {
-  children: ReactNode;
-}
+export const metadata = {
+  title: "My App",
+  description: "Next.js app with Clerk + PostgreSQL + Prisma",
+};
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
-
-export default Layout;
 
