@@ -15,16 +15,38 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  createdAt DateTime @default(now())
+  id           Int           @id @default(autoincrement())
+  name         String?
+  email        String        @unique
+  passwordHash  String?
+  role         String        @default("finance")
+  createdAt    DateTime      @default(now())
+  categories   Category[]
+  transactions Transaction[]
+}
+
+model Category {
+  id            Int           @id @default(autoincrement())
+  name          String
+  type          String        
+  monthlyTarget Float         @default(0)
+  createdById   Int
+  createdBy     User          @relation(fields: [createdById], references: [id])
+  createdAt     DateTime      @default(now())
+  transactions  Transaction[]
 }
 
 model Transaction {
-  id        Int     @id @default(autoincrement())
-  amount    Float
-  userId    Int
-  createdAt DateTime @default(now())
+  id          Int       @id @default(autoincrement())
+  amount      Float
+  description String?
+  dueDate     DateTime?
+  status      String    @default("due") // due, paid, received
+  isRecurring Boolean   @default(false)
+  type        String    
+  userId      Int
+  user        User      @relation(fields: [userId], references: [id])
+  categoryId  Int
+  category    Category  @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime  @default(now())
 }
-
