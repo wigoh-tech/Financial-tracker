@@ -49,15 +49,15 @@ export async function POST(req: Request) {
 
 
   if (evt.type === 'user.created') {
-    const { id, email_addresses, first_name } = evt.data;
-  
+    const { id, email_addresses, username } = evt.data;
+    
     try {
-      const hashedPassword = await bcrypt.hash('default_password', 10); // dummy
-  
+      const hashedPassword = await bcrypt.hash('default_password', 10); // Dummy password
+      
       const newUser = await prisma.user.create({
         data: {
           email: email_addresses[0].email_address,
-          username: first_name || 'user_' + id.slice(0, 6),
+          username: username || 'user_' + id.slice(0, 6),
           password: hashedPassword,
         },
       });

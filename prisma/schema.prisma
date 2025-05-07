@@ -16,7 +16,26 @@ model User {
 }
 
 model Client {
-  id     Int    @id @default(autoincrement())
-  userId Int
-  user   User   @relation(fields: [userId], references: [id])
+  id         Int             @id @default(autoincrement())
+  userId     Int
+  user       User            @relation(fields: [userId], references: [id])
+  userName   String
+  email    String            @unique
+  answers    IntakeAnswer[]  // 1-to-many relationship with answers
+}
+
+model IntakeQuestion {
+  id       Int             @id @default(autoincrement())
+  question String
+  answers  IntakeAnswer[]  // 1-to-many relationship with answers
+}
+
+model IntakeAnswer {
+  id             Int             @id @default(autoincrement())
+  clientId       Int
+  questionId     Int
+  answer         String
+
+  client         Client          @relation(fields: [clientId], references: [id])
+  question       IntakeQuestion  @relation(fields: [questionId], references: [id])
 }
