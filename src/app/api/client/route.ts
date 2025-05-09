@@ -1,31 +1,40 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { nanoid } from 'nanoid'; 
 
 export async function POST(req: Request) {
     try {
-        const { email, userName} = await req.json();
+        const { id, email, userName } = await req.json();
 
-        if ( !email || !userName) {
+        if (!email || !userName) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        // 1. Find the user by username
+        // 1. Find the user by email
         const user = await prisma.user.findUnique({
             where: { email },
         });
 
-        if (!user) {
-            return NextResponse.json({ error: 'User not found' }, { status: 404 });
-        }
+        const clientId = id || nanoid(6); // Generate ID if not provided
 
-        // 2. Create client with user.id as foreign key
+        // 2. Create client
         const client = await prisma.client.create({
             data: {
-                userId: user.id,
+                id: clientId,
+                userId: user ? user.id : undefined,
                 email,
-                userName, // Include the userName field as required
+                userName,
             },
         });
+
+        // 3. If client is linked to a user, update user status
+        if (user?.id) {
+            await prisma.user.update({
+              where: { id: user.id },
+              data: { status: 'clientloggedin' },
+            });
+            console.log(`Updated user ${user.id} status to clientloggedin`);
+        }
 
         return NextResponse.json(client, { status: 201 });
     } catch (error: any) {

@@ -12,30 +12,33 @@ model User {
   email    String   @unique
   username String
   password String
+  status   String? 
   clients  Client[] // ← ensure this matches your model
 }
 
 model Client {
-  id         Int             @id @default(autoincrement())
-  userId     Int
-  user       User            @relation(fields: [userId], references: [id])
+  id         String          @id @default(dbgenerated()) // or use nanoid in code
+  userId     Int?
+  user       User?            @relation(fields: [userId], references: [id])
   userName   String
-  email    String            @unique
-  answers    IntakeAnswer[]  // 1-to-many relationship with answers
+  email      String          @unique
+  answers    IntakeAnswer[]
 }
 
 model IntakeQuestion {
   id       Int             @id @default(autoincrement())
   question String
-  answers  IntakeAnswer[]  // 1-to-many relationship with answers
+  fieldType String   
+  options   String?         // e.g. "text", "radio", "textarea"
+  answers  IntakeAnswer[]
 }
 
 model IntakeAnswer {
-  id             Int             @id @default(autoincrement())
-  clientId       Int
-  questionId     Int
-  answer         String
+  id         Int             @id @default(autoincrement())
+  clientId   String
+  questionId Int
+  answer     String
 
-  client         Client          @relation(fields: [clientId], references: [id])
-  question       IntakeQuestion  @relation(fields: [questionId], references: [id])
+  client     Client          @relation(fields: [clientId], references: [id])
+  question   IntakeQuestion  @relation(fields: [questionId], references: [id])
 }
