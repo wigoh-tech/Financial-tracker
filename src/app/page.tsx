@@ -8,7 +8,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import Link from 'next/link';
-import HamburgerMenu from './components/HamburgerMenu';
+
 
 function Navbar() {
   return (
@@ -17,7 +17,7 @@ function Navbar() {
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-2xl font-extrabold text-indigo-600 tracking-wide hover:opacity-90">
-            INTAKE FORM
+            LOGIN TO CLERK
           </Link>
 
           {/* Navigation Actions */}
@@ -41,7 +41,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <HamburgerMenu />
+
     </div>
   );
 }

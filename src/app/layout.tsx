@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Client Intake",
+  title: "finance-tracker",
   description: "Next.js app with Clerk + PostgreSQL + Prisma",
 };
 

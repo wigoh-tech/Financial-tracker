@@ -7,38 +7,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id       Int      @id @default(autoincrement())
-  email    String   @unique
-  username String
-  password String
-  status   String? 
-  clients  Client[] // ← ensure this matches your model
+
+model Category {
+ id            Int           @id @default(autoincrement())
+  name          String
+  type          String        @default("expense")     // Set default
+  monthlyTarget Float         @default(0)             // Set default
+  createdAt     DateTime      @default(now())
+  transactions  Transaction[]
 }
 
-model Client {
-  id         String          @id @default(dbgenerated()) // or use nanoid in code
-  userId     Int?
-  user       User?            @relation(fields: [userId], references: [id])
-  userName   String
-  email      String          @unique
-  answers    IntakeAnswer[]
-}
+model Transaction {
+  id          Int       @id @default(autoincrement())
+  amount      Float
+  description String
+  dueDate     DateTime
+  type        String     // "income" or "expense"
+  category    Category?  @relation(fields: [categoryId], references: [id])
+  categoryId  Int?
+  createdAt   DateTime   @default(now())
 
-model IntakeQuestion {
-  id       Int             @id @default(autoincrement())
-  question String
-  fieldType String   
-  options   String?         // e.g. "text", "radio", "textarea"
-  answers  IntakeAnswer[]
-}
 
-model IntakeAnswer {
-  id         Int             @id @default(autoincrement())
-  clientId   String
-  questionId Int
-  answer     String
-
-  client     Client          @relation(fields: [clientId], references: [id])
-  question   IntakeQuestion  @relation(fields: [questionId], references: [id])
+  isPaid      Boolean  @default(false)
 }
+ 
