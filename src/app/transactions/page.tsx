@@ -234,7 +234,9 @@ import TransactionsForm from '@/components/TransactionsForm';
 export default function TransactionsPage() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-2xl font-bold mb-4">Transactions</h1>
+      {/* <h1 className="text-2xl  font-bold mb-4">Transactions</h1> */}
+      <h1 className="text-2xl font-bold mb-4 text-blue-600 text-center">Transactions</h1>
+
       <TransactionsForm />
     </div>
   );

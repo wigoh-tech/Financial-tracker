@@ -40,6 +40,10 @@ export async function POST(req: Request) {
       dueDate: new Date(body.dueDate),
       type: body.type,
       categoryId: body.categoryId ? parseInt(body.categoryId) : null,
+      isRecurring: body.isRecurring || false,
+      recurrence: body.recurrence || null,
+
+
     },
   });
   return NextResponse.json(transaction);

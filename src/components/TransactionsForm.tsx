@@ -9,6 +9,8 @@ export default function TransactionsForm() {
     dueDate: '',
     type: 'expense',
     categoryId: '',
+    isRecurring:false,
+    recurrence:''
   });
 
   const [categories, setCategories] = useState([]);
@@ -48,6 +50,8 @@ export default function TransactionsForm() {
         dueDate: '',
         type: 'expense',
         categoryId: '',
+        isRecurring:false,
+        recurrence:''
       });
       fetchTransactions();
     } catch (err) {
@@ -146,6 +150,30 @@ export default function TransactionsForm() {
             ))}
           </select>
         </div>
+
+
+        <div>
+    <label className="block text-sm font-medium mb-1">Recurring</label>
+    <input
+      type="checkbox"
+      checked={form.isRecurring}
+      onChange={(e) => setForm({ ...form, isRecurring: e.target.checked })}
+      className="w-5 h-5"
+    />
+  </div>
+
+  <div>
+    <label className="block text-sm font-medium mb-1">Recurrence</label>
+    <select
+      value={form.recurrence || ''}
+      onChange={(e) => setForm({ ...form, recurrence: e.target.value })}
+      className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+    >
+      <option value="">None</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+    </select>
+  </div>
 
         <button
           type="submit"
