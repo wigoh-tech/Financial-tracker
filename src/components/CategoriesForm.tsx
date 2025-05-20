@@ -56,7 +56,7 @@ export default function CategoriesPage() {
             className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="expense">Expense</option>
-            <option value="income">Income</option>
+            <option value="income">Revenue</option>
           </select>
         </div>
 

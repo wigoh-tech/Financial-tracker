@@ -9,8 +9,8 @@ export default function TransactionsForm() {
     dueDate: '',
     type: 'expense',
     categoryId: '',
-    isRecurring:false,
-    recurrence:''
+    isRecurring: false,
+    recurrence: ''
   });
 
   const [categories, setCategories] = useState([]);
@@ -50,8 +50,8 @@ export default function TransactionsForm() {
         dueDate: '',
         type: 'expense',
         categoryId: '',
-        isRecurring:false,
-        recurrence:''
+        isRecurring: false,
+        recurrence: ''
       });
       fetchTransactions();
     } catch (err) {
@@ -61,7 +61,7 @@ export default function TransactionsForm() {
 
   const handleTogglePaid = async (id: number, isPaid: boolean) => {
     try {
-      const res = await fetch(`/api/transactions/${id}`, {
+      const res = await fetch(`/api/transactions/${id}/status`, {
         method: 'PATCH',
         body: JSON.stringify({ isPaid }),
         headers: { 'Content-Type': 'application/json' },
@@ -89,8 +89,6 @@ export default function TransactionsForm() {
         onSubmit={handleSubmit}
         className="bg-white text-black max-w-xl mx-auto p-6 rounded-lg shadow-lg space-y-4 border border-gray-300"
       >
-        {/* Form Inputs */}
-        {/* ... (same as before) */}
         <div>
           <label className="block text-sm font-medium mb-1">Amount ($)</label>
           <input
@@ -131,7 +129,7 @@ export default function TransactionsForm() {
             className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             <option value="expense">Expense</option>
-            <option value="income">Income</option>
+            <option value="income">Revenue</option>
           </select>
         </div>
 
@@ -151,29 +149,28 @@ export default function TransactionsForm() {
           </select>
         </div>
 
+        <div>
+          <label className="block text-sm font-medium mb-1">Recurring</label>
+          <input
+            type="checkbox"
+            checked={form.isRecurring}
+            onChange={(e) => setForm({ ...form, isRecurring: e.target.checked })}
+            className="w-5 h-5"
+          />
+        </div>
 
         <div>
-    <label className="block text-sm font-medium mb-1">Recurring</label>
-    <input
-      type="checkbox"
-      checked={form.isRecurring}
-      onChange={(e) => setForm({ ...form, isRecurring: e.target.checked })}
-      className="w-5 h-5"
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-medium mb-1">Recurrence</label>
-    <select
-      value={form.recurrence || ''}
-      onChange={(e) => setForm({ ...form, recurrence: e.target.value })}
-      className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
-    >
-      <option value="">None</option>
-      <option value="weekly">Weekly</option>
-      <option value="monthly">Monthly</option>
-    </select>
-  </div>
+          <label className="block text-sm font-medium mb-1">Recurrence</label>
+          <select
+            value={form.recurrence || ''}
+            onChange={(e) => setForm({ ...form, recurrence: e.target.value })}
+            className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            <option value="">None</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
 
         <button
           type="submit"
@@ -205,14 +202,23 @@ export default function TransactionsForm() {
                   </p>
                 </div>
 
-                <div className="flex items-center space-x-2">
-                  <label className="text-sm text-black">Paid</label>
-                  <input
-                    type="checkbox"
-                    checked={tx.isPaid}
-                    onChange={() => handleTogglePaid(tx.id, !tx.isPaid)}
-                    className="w-5 h-5"
-                  />
+                <div className="flex flex-col items-end space-y-2">
+                  <button
+                    onClick={() => handleTogglePaid(tx.id, !tx.isPaid)}
+                    className={`px-3 py-1 rounded-md text-sm font-medium transition ${
+                      tx.isPaid
+                        ? 'bg-green-600 text-white'
+                        : 'bg-gray-300 text-black'
+                    }`}
+                  >
+                    {tx.type === 'income'
+                      ? tx.isPaid
+                        ? 'Received'
+                        : 'Mark as Received'
+                      : tx.isPaid
+                      ? 'Paid'
+                      : 'Mark as Paid'}
+                  </button>
                 </div>
               </li>
             ))}
