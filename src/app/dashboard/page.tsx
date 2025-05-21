@@ -35,33 +35,46 @@ export default function Dashboard() {
       });
   }, []);
 
-  if (!data) return <p>Loading...</p>;
+  if (!data)
+    return (
+      <div className="flex items-center justify-center h-64 text-gray-600 text-lg">
+        Loading dashboard...
+      </div>
+    );
 
   return (
-    <div className="p-4 space-y-6">
-      <div className="grid grid-cols-3 gap-4">
-        <Card title="Total Revenue" value={`₹${data.totalRevenue}`} bgColor="#F43610" textColor="#ffffff" />
-        <Card title="Total Expenses" value={`₹${data.totalExpenses}`} bgColor="#5C005C" textColor="#ffffff" />
-        <Card title="Net Profit" value={`₹${data.netProfit}`} bgColor="	#D97706" textColor="#1e293b" />
+    <div className="p-6 space-y-10">
+      {/* Summary Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card title="Total Revenue" value={`₹${data.totalRevenue}`} bgColor="#F97316" textColor="#ffffff" />
+        <Card title="Total Expenses" value={`₹${data.totalExpenses}`} bgColor="#6B21A8" textColor="#ffffff" />
+        <Card title="Net Profit" value={`₹${data.netProfit}`} bgColor="#FACC15" textColor="#1e293b" />
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Monthly Revenue vs Expenses</h2>
+      {/* Charts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Line Chart */}
+        <div className="bg-white rounded-2xl p-6 shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Monthly Revenue vs Expenses
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data.monthlyTrends}>
               <XAxis dataKey="month" />
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="revenue" stroke="#F43610" strokeWidth={2} />
-              <Line type="monotone" dataKey="expense" stroke="#5C005C" strokeWidth={2} />
+              <Line type="monotone" dataKey="revenue" stroke="#F97316" strokeWidth={2} />
+              <Line type="monotone" dataKey="expense" stroke="#6B21A8" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Category-wise Breakdown</h2>
+        {/* Pie Chart */}
+        <div className="bg-white rounded-2xl p-6 shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Category-wise Breakdown
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -95,11 +108,11 @@ function Card({
 }) {
   return (
     <div
-      className="p-4 rounded-xl shadow"
+      className="p-5 rounded-2xl shadow hover:shadow-lg transition duration-300"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
-      <p className="text-md text-gray-200">{title}</p>
-      <p className="text-2xl font-bold">{value}</p>
+      <p className="text-sm font-medium opacity-90">{title}</p>
+      <p className="text-2xl font-bold mt-1">{value}</p>
     </div>
   );
 }

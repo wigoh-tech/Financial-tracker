@@ -7,29 +7,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Category {
   id            Int           @id @default(autoincrement())
   name          String
-  type          String        @default("expense")     // "expense" or "revenue"
-  monthlyTarget Float         @default(0)
   createdAt     DateTime      @default(now())
+  monthlyTarget Float         @default(0)
+  type          String        @default("expense")
   transactions  Transaction[]
 }
 
 model Transaction {
   id          Int       @id @default(autoincrement())
   amount      Float
+  categoryId  Int?
+  createdAt   DateTime  @default(now())
   description String
   dueDate     DateTime
-  type        String     // "expense" or "revenue" ← ✅ match Category.type
-  category    Category?  @relation(fields: [categoryId], references: [id])
-  categoryId  Int?
-  createdAt   DateTime   @default(now())
-  isPaid      Boolean    @default(false)
-  isRecurring Boolean    @default(false)
-  recurrence  String?    // e.g., "monthly", "weekly"
+  type        String
+  isPaid      Boolean   @default(false)
+  isRecurring Boolean   @default(false)
+  recurrence  String?
+  category    Category? @relation(fields: [categoryId], references: [id])
 }
-
-
-  

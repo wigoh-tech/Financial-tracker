@@ -181,50 +181,58 @@ export default function TransactionsForm() {
       </form>
 
       <div className="mt-10 max-w-xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 text-black">Recent Transactions</h2>
-        {transactions.length === 0 ? (
-          <p className="text-gray-600 italic">No transactions yet.</p>
-        ) : (
-          <ul className="space-y-4">
-            {transactions.map((tx: any) => (
-              <li
-                key={tx.id}
-                className="border border-gray-300 rounded-md p-4 bg-gray-100 flex justify-between items-center"
-              >
-                <div>
-                  <p className="font-semibold text-lg text-black">
-                    ${parseFloat(tx.amount).toFixed(2)}
-                  </p>
-                  <p className="text-gray-700">{tx.description}</p>
-                  <p className="text-gray-500 text-sm">
-                    {tx.type} • Due: {new Date(tx.dueDate).toLocaleDateString()}
-                    {tx.category && ` • ${tx.category.name}`}
-                  </p>
-                </div>
+  <h2 className="text-2xl font-semibold mb-4 text-black">Recent Transactions</h2>
 
-                <div className="flex flex-col items-end space-y-2">
-                  <button
-                    onClick={() => handleTogglePaid(tx.id, !tx.isPaid)}
-                    className={`px-3 py-1 rounded-md text-sm font-medium transition ${
-                      tx.isPaid
-                        ? 'bg-green-600 text-white'
-                        : 'bg-gray-300 text-black'
-                    }`}
-                  >
-                    {tx.type === 'income'
-                      ? tx.isPaid
-                        ? 'Received'
-                        : 'Mark as Received'
-                      : tx.isPaid
-                      ? 'Paid'
-                      : 'Mark as Paid'}
-                  </button>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+  {transactions.length === 0 ? (
+    <p className="text-gray-600 italic">No transactions yet.</p>
+  ) : (
+    <div className="max-h-80 overflow-y-auto rounded-lg border border-gray-200 shadow-sm">
+      <ul className="divide-y divide-gray-200">
+        {transactions.map((tx: any) => (
+          <li
+            key={tx.id}
+            className="flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+          >
+            <div>
+              <p
+                className={`text-lg font-semibold ${
+                  tx.type === 'income' ? 'text-green-600' : 'text-red-500'
+                }`}
+              >
+                {tx.type === 'income' ? '+' : '-'}₹{parseFloat(tx.amount).toFixed(2)}
+              </p>
+              <p className="text-sm text-gray-700">{tx.description}</p>
+              <p className="text-xs text-gray-500">
+                {tx.type} • Due: {new Date(tx.dueDate).toLocaleDateString()}
+                {tx.category?.name && ` • ${tx.category.name}`}
+              </p>
+            </div>
+
+            <div className="flex flex-col items-end space-y-2">
+              <button
+                onClick={() => handleTogglePaid(tx.id, !tx.isPaid)}
+                className={`px-3 py-1 rounded-md text-xs font-medium transition ${
+                  tx.isPaid
+                    ? 'bg-green-600 text-white'
+                    : 'bg-gray-200 text-black'
+                }`}
+              >
+                {tx.type === 'income'
+                  ? tx.isPaid
+                    ? 'Received'
+                    : 'Mark as Received'
+                  : tx.isPaid
+                  ? 'Paid'
+                  : 'Mark as Paid'}
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
+
     </div>
   );
 }

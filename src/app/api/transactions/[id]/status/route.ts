@@ -5,8 +5,14 @@ export async function PATCH(
   req: NextRequest,
   context: { params: { id: string } }
 ) {
-  const { params } = await Promise.resolve(context);
-  const id = parseInt(params.id);
+
+  const { params } = await (context);
+  const abcd=await (params)
+  console.log(params)
+
+  const id = parseInt(abcd.id);
+
+  
 
   const { isPaid } = await req.json();
 

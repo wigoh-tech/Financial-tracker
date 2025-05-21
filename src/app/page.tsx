@@ -1,49 +1,46 @@
-'use client';
 import React from 'react';
-import {
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs';
 import Link from 'next/link';
+import Image from 'next/image';
+import DownloadCSVButton from '@/components/downloadcsvbutton';
 
-
-function Navbar() {
+export default function Home() {
   return (
-    <div>
-      <nav className="bg-white border-b shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="text-2xl font-extrabold text-indigo-600 tracking-wide hover:opacity-90">
-            LOGIN TO CLERK
-          </Link>
+    <div className="min-h-screen flex flex-col items-center justify-between bg-gradient-to-b from-purple-100 to-pink-150 px-4 py-6">
+      
+      {/* Logo */}
+      <div className="pt-4">
+        <Image
+          src="/images/wigoh.png"
+          alt="Finance Tracker Logo"
+          width={270}
+          height={120}
+          className="mx-auto"
+        />
+      </div>
 
-          {/* Navigation Actions */}
-          <div className="flex items-center gap-4">
-            <SignedOut>
-              <SignInButton>
-                <button className="px-4 py-2 rounded-full border border-black bg-white text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] hover:-translate-y-[1px] transition-all duration-200">
-                  Sign In
-                </button>
-              </SignInButton>
-              <SignUpButton>
-                <button className="px-4 py-2 rounded-full border border-black bg-black text-white text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] hover:-translate-y-[1px] transition-all duration-200">
-                  Sign Up
-                </button>
-              </SignUpButton>
-            </SignedOut>
+      {/* Main Content Card */}
+      <main className="flex-grow flex items-center justify-center w-full">
+        <div className="bg-white rounded-3xl shadow-lg p-10 w-full max-w-xl text-center border border-gray-200">
+          <h1 className="text-3xl font-extrabold text-indigo-700 mb-4">
+            Welcome to Your Finance Tracker
+          </h1>
+          <p className="text-gray-600 text-base mb-6 leading-relaxed">
+            Track your spending, categorize expenses, and take control of your financial goals with ease.
+          </p>
 
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold text-blue-600 mb-2">Export Transactions</h2>
+            <DownloadCSVButton month="2025-05" />
           </div>
         </div>
-      </nav>
+      </main>
 
+      {/* Footer Links */}
+      <footer className="w-full text-center text-sm text-indigo-600 mt-6 space-x-6 pb-4">
+        <Link href="/contact" className="hover:underline">Contact Us</Link>
+        <Link href="/settings" className="hover:underline">Settings</Link>
+        <Link href="/help" className="hover:underline">Help Center</Link>
+      </footer>
     </div>
   );
 }
-
-export default Navbar;
