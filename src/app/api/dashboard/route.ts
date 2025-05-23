@@ -1,38 +1,34 @@
-// src/app/api/dashboard/route.ts
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/db'; // Adjust this import if different
-import { startOfMonth, endOfMonth, format } from 'date-fns';
+import { auth } from '@clerk/nextjs/server';
+import { prisma } from '@/lib/db';
+import { format } from 'date-fns';
 
 export async function GET() {
+  const { userId } =  await auth();
+  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
   const now = new Date();
 
-  // Total revenue & expenses
   const [totalRevenue, totalExpenses] = await Promise.all([
     prisma.transaction.aggregate({
-      where: { type: 'revenue' },
+      where: { type: 'revenue', userId },
       _sum: { amount: true },
     }),
     prisma.transaction.aggregate({
-      where: { type: 'expense' },
+      where: { type: 'expense', userId },
       _sum: { amount: true },
     }),
   ]);
 
-  // Monthly trends (last 6 months)
   const sixMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 5, 1);
   const monthlyTrendsRaw = await prisma.transaction.findMany({
-    where: { createdAt: { gte: sixMonthsAgo } },
-    select: {
-      amount: true,
-      type: true,
-      createdAt: true,
-    },
+    where: { createdAt: { gte: sixMonthsAgo }, userId },
+    select: { amount: true, type: true, createdAt: true },
   });
 
-  // Process into month buckets
   const trendsMap: Record<string, { revenue: number; expense: number }> = {};
   monthlyTrendsRaw.forEach((tx) => {
-    const month = format(tx.createdAt, 'yyyy-dd-MM');
+    const month = format(tx.createdAt, 'yyyy-MM');
     if (!trendsMap[month]) trendsMap[month] = { revenue: 0, expense: 0 };
     trendsMap[month][tx.type as 'revenue' | 'expense'] += tx.amount;
   });
@@ -42,14 +38,13 @@ export async function GET() {
     ...data,
   }));
 
-  // Category breakdown
   const categoryBreakdown = await prisma.transaction.groupBy({
     by: ['categoryId'],
     _sum: { amount: true },
-    where: {},
+    where: { userId },
   });
 
-  const categories = await prisma.category.findMany();
+  const categories = await prisma.category.findMany({ where: { userId } });
   const breakdown = categoryBreakdown.map((item) => {
     const cat = categories.find((c) => c.id === item.categoryId);
     return {

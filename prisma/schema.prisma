@@ -7,12 +7,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String   @id @default(cuid())
+  clerkId   String   @unique
+   username     String
+  email     String   @unique
+  firstName String?
+  lastName  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+    categories   Category[]
+  transactions Transaction[]
+}
+
 model Category {
   id            Int           @id @default(autoincrement())
   name          String
   createdAt     DateTime      @default(now())
   monthlyTarget Float         @default(0)
   type          String        @default("expense")
+  userId        String
+  user          User          @relation(fields: [userId], references: [id])
   transactions  Transaction[]
 }
 
@@ -27,5 +43,7 @@ model Transaction {
   isPaid      Boolean   @default(false)
   isRecurring Boolean   @default(false)
   recurrence  String?
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
   category    Category? @relation(fields: [categoryId], references: [id])
 }

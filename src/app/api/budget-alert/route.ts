@@ -1,5 +1,6 @@
 import { sendBudgetRevenueAlert } from '@/controllers/checkDue';
 import { NextResponse } from 'next/server';
+import { POST } from '../categories/route';
 
 export async function GET() {
   try {
@@ -10,4 +11,6 @@ export async function GET() {
     return NextResponse.json({ error: 'Failed to send budget alert' }, { status: 500 });
   }
 }
+
+
  
