@@ -4,7 +4,15 @@ import { prisma } from '@/lib/db';
 import { auth } from '@clerk/nextjs/server';
 
 jest.mock('@clerk/nextjs/server');
-jest.mock('@/lib/db');
+jest.mock('@/lib/db', () => ({
+  prisma: {
+    category: {
+      findMany: jest.fn(),
+      create: jest.fn(),
+    },
+  },
+}));
+
 
 describe('Category Controller', () => {
   beforeEach(() => {

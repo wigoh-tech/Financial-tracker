@@ -1,23 +1,14 @@
 import { prisma } from '../lib/db';
-import nodemailer from 'nodemailer';
 import dayjs from 'dayjs';
 import dotenv from 'dotenv';
+import { sendEmail } from '../lib/emailService';
 
 dotenv.config();
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
-});
 
 export async function checkDueTransactionsAndNotify() {
   const today = dayjs().startOf('day').toDate();
   const threeDaysFromNow = dayjs().add(3, 'day').endOf('day').toDate();
 
-  // 1. Send Due Transaction Reminders
   const dueTransactions = await prisma.transaction.findMany({
     where: {
       dueDate: {
@@ -29,8 +20,7 @@ export async function checkDueTransactionsAndNotify() {
   });
 
   for (const tx of dueTransactions) {
-    await transporter.sendMail({
-      from: process.env.MAIL_USER,
+    await sendEmail({
       to: 'urssriniforever14@gmail.com',
       subject: '💰 Payment Due Reminder',
       text: `You have a payment of ₹${tx.amount} due.\nDescription: ${tx.description}\nDue Date: ${tx.dueDate.toDateString()}`,
@@ -38,9 +28,6 @@ export async function checkDueTransactionsAndNotify() {
   }
 
   console.log(`Reminders sent for ${dueTransactions.length} transactions`);
-
-  // 2. Budget and Revenue Check
- 
 }
 
 export async function sendBudgetRevenueAlert() {
@@ -60,7 +47,7 @@ export async function sendBudgetRevenueAlert() {
     }
   }
 
-  const goal = parseFloat(process.env.REVENUE_GOAL || "10000");
+  const goal = parseFloat(process.env.REVENUE_GOAL || '10000');
   const revenueAlert = totalIncome < 0.8 * goal;
 
   if (breaches.length || revenueAlert) {
@@ -78,9 +65,8 @@ export async function sendBudgetRevenueAlert() {
       html += `<h3>🟡 Revenue Below Goal</h3><p>Income: ₹${totalIncome} / Goal: ₹${goal}</p>`;
     }
 
-    await transporter.sendMail({
-      from: process.env.MAIL_USER,
-      to:'urssriniforever14@gmail.com',
+    await sendEmail({
+      to: 'urssriniforever14@gmail.com',
       subject: '📢 Budget and Revenue Alert',
       html,
     });

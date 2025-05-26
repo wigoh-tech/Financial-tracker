@@ -1,0 +1,6 @@
+[2025-05-26T11:04:23.726Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-26T11:07:34.088Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-26T11:26:31.870Z] WARN: Unauthorized access to POST /api/categories
+[2025-05-26T11:28:24.239Z] ERROR: POST /api/categories failed: SyntaxError: Unexpected end of JSON input
+[2025-05-26T11:29:24.116Z] WARN: Unauthorized access to POST /api/categories
+[2025-05-26T11:29:36.644Z] WARN: Unauthorized access to POST /api/categories

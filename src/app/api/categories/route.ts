@@ -17,33 +17,56 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { prisma } from '@/lib/db';
+import logger from '@/lib/logger';
 
 export async function GET() {
-  const { userId } = await auth();
-  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  try {
+    const { userId } = await auth();
+    if (!userId) {
+      logger.warn('Unauthorized access to GET /api/categories');
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
-  const categories = await prisma.category.findMany({
-    where: { userId },
-  });
-  return NextResponse.json(categories);
+    logger.info(`Fetching categories for user: ${userId}`);
+
+    const categories = await prisma.category.findMany({
+      where: { userId },
+    });
+
+    logger.info(`Found ${categories.length} categories`);
+    return NextResponse.json(categories);
+  } catch (error) {
+    logger.error(`GET /api/categories failed: ${error}`);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
 }
 
 export async function POST(req: Request) {
-  const { userId } = await auth();
-  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  try {
+    const { userId } = await auth();
+    if (!userId) {
+      logger.warn('Unauthorized access to POST /api/categories');
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
-  const body = await req.json();
+    const body = await req.json();
+    logger.info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
 
-  const category = await prisma.category.create({
-    data: {
-      name: body.name,
-      type: body.type,
-      monthlyTarget: parseFloat(body.monthlyTarget),
-      userId,
-    },
-  });
+    const category = await prisma.category.create({
+      data: {
+        name: body.name,
+        type: body.type,
+        monthlyTarget: parseFloat(body.monthlyTarget),
+        userId,
+      },
+    });
 
-  return NextResponse.json(category);
+    logger.info(`Category created: ${category.id}`);
+    return NextResponse.json(category);
+  } catch (error) {
+    logger.error(`POST /api/categories failed: ${error}`);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
 }
 
 

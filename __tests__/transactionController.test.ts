@@ -3,7 +3,15 @@ import { prisma } from '@/lib/db';
 import { auth } from '@clerk/nextjs/server';
 
 jest.mock('@clerk/nextjs/server');
-jest.mock('@/lib/db');
+jest.mock('@/lib/db', () => ({
+  prisma: {
+    transaction: {
+      findMany: jest.fn(),
+      create: jest.fn(),
+    },
+  },
+}));
+
 
 describe('Transaction Controller', () => {
   beforeEach(() => {
