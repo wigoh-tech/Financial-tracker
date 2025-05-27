@@ -4,3 +4,924 @@
 [2025-05-26T11:28:24.239Z] ERROR: POST /api/categories failed: SyntaxError: Unexpected end of JSON input
 [2025-05-26T11:29:24.116Z] WARN: Unauthorized access to POST /api/categories
 [2025-05-26T11:29:36.644Z] WARN: Unauthorized access to POST /api/categories
+[2025-05-27T02:29:58.554Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.609Z] INFO: Fetching transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.663Z] INFO: Fetched 0 transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.674Z] INFO: Found 0 categories
+[2025-05-27T02:29:58.734Z] INFO: Fetching transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.738Z] INFO: Fetched 0 transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.742Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:29:58.743Z] INFO: Found 0 categories
+[2025-05-27T02:30:03.108Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:03.109Z] INFO: Found 0 categories
+[2025-05-27T02:30:03.159Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:03.160Z] INFO: Found 0 categories
+[2025-05-27T02:30:13.254Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"rent","type":"expense","monthlyTarget":1500}
+[2025-05-27T02:30:13.274Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:30:13.334Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:13.336Z] INFO: Found 0 categories
+[2025-05-27T02:30:19.905Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:19.906Z] INFO: Found 0 categories
+[2025-05-27T02:30:36.435Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:36.437Z] INFO: Found 0 categories
+[2025-05-27T02:30:36.441Z] INFO: Fetching transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:36.443Z] INFO: Fetched 0 transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:36.500Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:36.502Z] INFO: Found 0 categories
+[2025-05-27T02:30:36.508Z] INFO: Fetching transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:36.510Z] INFO: Fetched 0 transactions for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:58.270Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:58.271Z] INFO: Found 0 categories
+[2025-05-27T02:30:58.299Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:30:58.300Z] INFO: Found 0 categories
+[2025-05-27T02:31:12.021Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"shopping","type":"expense","monthlyTarget":200}
+[2025-05-27T02:31:12.025Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:31:12.076Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:31:12.077Z] INFO: Found 0 categories
+[2025-05-27T02:31:13.421Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"","type":"expense","monthlyTarget":null}
+[2025-05-27T02:31:13.425Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:13.492Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:31:13.493Z] INFO: Found 0 categories
+[2025-05-27T02:31:13.760Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"","type":"expense","monthlyTarget":null}
+[2025-05-27T02:31:13.765Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:13.857Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:31:13.858Z] INFO: Found 0 categories
+[2025-05-27T02:31:14.069Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"","type":"expense","monthlyTarget":null}
+[2025-05-27T02:31:14.073Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:14.125Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:31:14.126Z] INFO: Found 0 categories
+[2025-05-27T02:31:44.190Z] INFO: Creating category for user user_2xcPDJH3yOvfikPbM3oalZ3TuDi: {"name":"rent","type":"expense","monthlyTarget":200}
+[2025-05-27T02:31:44.192Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:31:44.257Z] INFO: Fetching categories for user: user_2xcPDJH3yOvfikPbM3oalZ3TuDi
+[2025-05-27T02:31:44.259Z] INFO: Found 0 categories
+[2025-05-27T02:37:45.136Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:45.136Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:45.140Z] INFO: Found 0 categories
+[2025-05-27T02:37:45.159Z] INFO: Fetched 0 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:45.220Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:45.222Z] INFO: Found 0 categories
+[2025-05-27T02:37:45.235Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:45.236Z] INFO: Fetched 0 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:48.096Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:48.097Z] INFO: Found 0 categories
+[2025-05-27T02:37:48.133Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:37:48.134Z] INFO: Found 0 categories
+[2025-05-27T02:38:07.838Z] INFO: Creating category for user user_2xezh5mqQz77cH6hJ34Xta8qTIt: {"name":"rent","type":"expense","monthlyTarget":2500}
+[2025-05-27T02:38:07.842Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:38:07.906Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:38:07.908Z] INFO: Found 0 categories
+[2025-05-27T02:50:47.209Z] INFO: Creating category for user user_2xezh5mqQz77cH6hJ34Xta8qTIt: {"name":"rent","type":"expense","monthlyTarget":2500}
+[2025-05-27T02:50:47.229Z] INFO: Category created: 5
+[2025-05-27T02:50:47.275Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:50:47.277Z] INFO: Found 1 categories
+[2025-05-27T02:50:57.767Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:50:57.770Z] INFO: Found 1 categories
+[2025-05-27T02:51:13.659Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:13.679Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T02:51:13.686Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:13.771Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:13.775Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T02:51:13.780Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:18.572Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:18.573Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T02:51:18.578Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:48.932Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:48.935Z] INFO: Fetched 0 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:48.951Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:48.953Z] INFO: Found 1 categories
+[2025-05-27T02:51:49.013Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:49.019Z] INFO: Fetched 0 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:49.026Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:51:49.029Z] INFO: Found 1 categories
+[2025-05-27T02:52:14.122Z] INFO: Creating transaction for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:14.124Z] INFO: Transaction created with ID: 1 for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:14.164Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:14.166Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:34.774Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:34.776Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:44.545Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:44.546Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T02:52:44.550Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:44.582Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:44.583Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T02:52:44.586Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:53.120Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:52:53.122Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T02:52:53.124Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.078Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.079Z] INFO: Found 1 categories
+[2025-05-27T02:53:44.082Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.085Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.146Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.148Z] INFO: Found 1 categories
+[2025-05-27T02:53:44.156Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:44.158Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:51.138Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:51.139Z] INFO: Found 1 categories
+[2025-05-27T02:53:51.167Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:51.169Z] INFO: Found 1 categories
+[2025-05-27T02:53:56.158Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.160Z] INFO: Found 1 categories
+[2025-05-27T02:53:56.167Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.170Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.240Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.241Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.242Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T02:53:56.244Z] INFO: Found 1 categories
+[2025-05-27T03:11:56.034Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:11:56.050Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:11:56.210Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:11:56.231Z] INFO: Found 1 categories
+[2025-05-27T03:13:09.279Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:13:09.284Z] INFO: Found 1 categories
+[2025-05-27T03:14:03.296Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T03:16:21.844Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:21.846Z] INFO: Found 1 categories
+[2025-05-27T03:16:22.035Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:22.039Z] INFO: Found 1 categories
+[2025-05-27T03:16:55.086Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:55.091Z] INFO: Found 1 categories
+[2025-05-27T03:16:55.107Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:55.112Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:55.259Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:55.269Z] INFO: Found 1 categories
+[2025-05-27T03:16:55.290Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:16:55.299Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:17:01.586Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:17:01.627Z] INFO: Found 1 categories
+[2025-05-27T03:17:01.752Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:17:01.756Z] INFO: Found 1 categories
+[2025-05-27T03:17:22.421Z] INFO: Creating category for user user_2xezh5mqQz77cH6hJ34Xta8qTIt: {"name":"rent","type":"expense","monthlyTarget":0}
+[2025-05-27T03:17:22.430Z] INFO: Category created: 6
+[2025-05-27T03:17:22.581Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:17:22.586Z] INFO: Found 2 categories
+[2025-05-27T03:18:04.458Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:04.464Z] INFO: Found 2 categories
+[2025-05-27T03:18:04.499Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:04.513Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:04.704Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:04.711Z] INFO: Found 2 categories
+[2025-05-27T03:18:04.734Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:04.738Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:15.970Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:15.975Z] INFO: Found 2 categories
+[2025-05-27T03:18:16.097Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:16.104Z] INFO: Found 2 categories
+[2025-05-27T03:18:41.502Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:41.562Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T03:18:41.614Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:41.705Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T03:18:41.708Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T03:18:41.716Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:25:48.641Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:25:48.659Z] INFO: Found 2 categories
+[2025-05-27T04:25:48.712Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:25:48.714Z] INFO: Found 2 categories
+[2025-05-27T04:35:10.553Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.554Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.578Z] INFO: Found 2 categories
+[2025-05-27T04:35:10.581Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.634Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.636Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.640Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:10.641Z] INFO: Found 2 categories
+[2025-05-27T04:35:21.340Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:21.340Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:21.341Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:35:21.343Z] INFO: Found 2 categories
+[2025-05-27T04:57:45.345Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:57:45.380Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:57:45.444Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:57:45.458Z] INFO: Found 1 categories
+[2025-05-27T04:58:31.408Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:31.410Z] INFO: Found 1 categories
+[2025-05-27T04:58:31.465Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:31.466Z] INFO: Found 1 categories
+[2025-05-27T04:58:54.129Z] INFO: Creating category for user user_2xezh5mqQz77cH6hJ34Xta8qTIt: {"name":"Grocery Shopping","type":"expense","monthlyTarget":3000}
+[2025-05-27T04:58:54.134Z] INFO: Category created: 7
+[2025-05-27T04:58:54.174Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:54.176Z] INFO: Found 2 categories
+[2025-05-27T04:58:56.355Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:56.357Z] INFO: Found 2 categories
+[2025-05-27T04:58:56.364Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:56.370Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:56.419Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:56.421Z] INFO: Found 2 categories
+[2025-05-27T04:58:56.425Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:56.426Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:58.086Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:58.087Z] INFO: Found 2 categories
+[2025-05-27T04:58:58.118Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:58:58.121Z] INFO: Found 2 categories
+[2025-05-27T04:59:03.472Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.472Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.473Z] INFO: Found 2 categories
+[2025-05-27T04:59:03.474Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.557Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.558Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.560Z] INFO: Fetched 1 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:03.561Z] INFO: Found 2 categories
+[2025-05-27T04:59:25.189Z] INFO: Creating transaction for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:25.194Z] INFO: Transaction created with ID: 2 for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:25.249Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:25.253Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:37.557Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:37.564Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T04:59:37.572Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:37.688Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T04:59:37.689Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T04:59:37.692Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T05:55:51.222Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T05:55:51.240Z] INFO: Found 2 categories
+[2025-05-27T05:55:51.285Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T05:55:51.287Z] INFO: Found 2 categories
+[2025-05-27T06:09:00.606Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:09:00.611Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:09:00.670Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:09:00.681Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:09:28.421Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:18:23.915Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:18:31.897Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:18:37.738Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:18:37.768Z] INFO: Found 2 categories
+[2025-05-27T06:19:05.056Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:19:05.057Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:19:05.109Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:19:05.116Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:19:19.642Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:19:19.646Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:24:28.213Z] WARN: Unauthorized access to GET /api/categories
+[2025-05-27T06:24:28.229Z] WARN: Unauthorized access to GET /api/transactions
+[2025-05-27T06:24:55.986Z] WARN: Unauthorized access to GET /api/dashboard
+[2025-05-27T06:24:56.022Z] WARN: Unauthorized access to GET /api/dashboard
+[2025-05-27T06:25:08.657Z] WARN: Unauthorized access to GET /api/dashboard
+[2025-05-27T06:25:08.697Z] WARN: Unauthorized access to GET /api/dashboard
+[2025-05-27T06:27:51.796Z] WARN: Unauthorized access to GET /api/dashboard
+[2025-05-27T06:28:56.606Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:28:56.718Z] INFO: Found 2 categories
+[2025-05-27T06:28:56.764Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:28:56.766Z] INFO: Found 2 categories
+[2025-05-27T06:28:59.424Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:28:59.426Z] INFO: Found 2 categories
+[2025-05-27T06:28:59.481Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:28:59.482Z] INFO: Found 2 categories
+[2025-05-27T06:29:00.333Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:00.340Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:00.428Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:00.435Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:07.311Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:07.339Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:29:07.349Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:07.416Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:07.417Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:29:07.420Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.672Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.675Z] INFO: Found 2 categories
+[2025-05-27T06:29:44.683Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.685Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.747Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.748Z] INFO: Found 2 categories
+[2025-05-27T06:29:44.756Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:44.758Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:46.685Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:46.687Z] INFO: Found 2 categories
+[2025-05-27T06:29:46.736Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:29:46.737Z] INFO: Found 2 categories
+[2025-05-27T06:33:10.443Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:10.445Z] INFO: Found 2 categories
+[2025-05-27T06:33:10.451Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:10.453Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:10.507Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:10.508Z] INFO: Found 2 categories
+[2025-05-27T06:33:10.515Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:10.516Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:52.979Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:52.982Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:33:52.987Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:53.049Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:33:53.051Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:33:53.057Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:34:05.138Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:34:05.157Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:34:05.162Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:36:10.026Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:36:10.045Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:36:10.050Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:41:53.643Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:41:53.672Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:41:53.678Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:41:53.755Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:41:53.760Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:41:53.769Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.705Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.707Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.707Z] INFO: Found 2 categories
+[2025-05-27T06:42:23.713Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.771Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.773Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:23.776Z] INFO: Found 2 categories
+[2025-05-27T06:42:23.779Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:43.246Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:43.247Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:43.251Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:43.299Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:43.303Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:43.310Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.089Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.090Z] INFO: Found 2 categories
+[2025-05-27T06:42:44.093Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.096Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.156Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.158Z] INFO: Found 2 categories
+[2025-05-27T06:42:44.173Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:44.175Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:46.097Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:46.098Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:46.102Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:46.149Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:46.151Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:46.158Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.050Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.051Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.054Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.056Z] INFO: Found 2 categories
+[2025-05-27T06:42:47.117Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.122Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.129Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:47.134Z] INFO: Found 2 categories
+[2025-05-27T06:42:48.500Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:48.502Z] INFO: Found 2 categories
+[2025-05-27T06:42:48.549Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:48.551Z] INFO: Found 2 categories
+[2025-05-27T06:42:57.606Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:57.607Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:57.609Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:57.714Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:42:57.717Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:42:57.721Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.697Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.699Z] INFO: Found 2 categories
+[2025-05-27T06:43:12.705Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.707Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.764Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.766Z] INFO: Found 2 categories
+[2025-05-27T06:43:12.776Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:43:12.779Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.175Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.179Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:44:24.183Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.239Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.241Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:44:24.246Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.912Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.914Z] INFO: Found 2 categories
+[2025-05-27T06:44:24.916Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.918Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.967Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.969Z] INFO: Found 2 categories
+[2025-05-27T06:44:24.972Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:44:24.975Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:10.810Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:10.811Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:45:10.813Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:10.857Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:10.859Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T06:45:10.865Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.590Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.591Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.592Z] INFO: Found 2 categories
+[2025-05-27T06:45:11.593Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.643Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.645Z] INFO: Found 2 categories
+[2025-05-27T06:45:11.647Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:11.651Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:12.302Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:12.303Z] INFO: Found 2 categories
+[2025-05-27T06:45:12.343Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:12.344Z] INFO: Found 2 categories
+[2025-05-27T06:45:24.318Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:24.320Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:24.321Z] INFO: Found 2 categories
+[2025-05-27T06:45:24.323Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:24.384Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:24.388Z] INFO: Found 2 categories
+[2025-05-27T06:45:24.392Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:45:24.394Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:58:00.426Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:58:00.444Z] INFO: Found 2 categories
+[2025-05-27T06:58:00.485Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T06:58:00.486Z] INFO: Found 2 categories
+[2025-05-27T07:04:50.605Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:04:50.632Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:04:50.639Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:04:50.696Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:04:50.697Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:04:50.701Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:43.483Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:43.485Z] INFO: Found 2 categories
+[2025-05-27T07:07:43.534Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:43.535Z] INFO: Found 2 categories
+[2025-05-27T07:07:47.190Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:47.191Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:07:47.193Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:47.236Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:47.237Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:07:47.239Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.872Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.878Z] INFO: Found 2 categories
+[2025-05-27T07:07:48.894Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.899Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.943Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.949Z] INFO: Found 2 categories
+[2025-05-27T07:07:48.956Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:48.958Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:51.024Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:51.026Z] INFO: Found 2 categories
+[2025-05-27T07:07:51.071Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:07:51.072Z] INFO: Found 2 categories
+[2025-05-27T07:25:21.900Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:21.930Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:21.934Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:21.993Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:21.995Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:22.000Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:27.030Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:27.031Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:27.033Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:27.073Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:27.074Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:27.077Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:52.826Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:52.828Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:52.831Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:52.868Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:52.870Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:52.872Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:54.955Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:54.957Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:54.960Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:54.962Z] INFO: Found 2 categories
+[2025-05-27T07:25:55.016Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:55.018Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:55.027Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:55.029Z] INFO: Found 2 categories
+[2025-05-27T07:25:56.516Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:56.517Z] INFO: Found 2 categories
+[2025-05-27T07:25:56.552Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:56.553Z] INFO: Found 2 categories
+[2025-05-27T07:25:59.938Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:59.939Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:59.941Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:59.973Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:25:59.976Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:25:59.979Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:17.902Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:17.917Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:17.958Z] INFO: Found 2 categories
+[2025-05-27T07:34:17.963Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:18.030Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:18.032Z] INFO: Found 2 categories
+[2025-05-27T07:34:18.035Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:34:18.037Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:49.754Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:49.755Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:35:49.760Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:49.808Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:49.810Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:35:49.814Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.507Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.507Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.508Z] INFO: Found 2 categories
+[2025-05-27T07:35:51.511Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.573Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.576Z] INFO: Found 2 categories
+[2025-05-27T07:35:51.587Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:51.589Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:52.979Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:52.982Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:52.983Z] INFO: Found 2 categories
+[2025-05-27T07:35:52.986Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:54.503Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:54.506Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:35:54.510Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:54.556Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:35:54.557Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:35:54.565Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.385Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.386Z] INFO: Found 2 categories
+[2025-05-27T07:36:04.392Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.395Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.442Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.444Z] INFO: Found 2 categories
+[2025-05-27T07:36:04.448Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:36:04.451Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:09.091Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:09.114Z] INFO: Found 2 categories
+[2025-05-27T07:40:09.156Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:09.157Z] INFO: Found 2 categories
+[2025-05-27T07:40:14.612Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:14.614Z] INFO: Found 2 categories
+[2025-05-27T07:40:14.616Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:14.619Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:14.672Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:14.675Z] INFO: Found 2 categories
+[2025-05-27T07:40:14.683Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:14.685Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:27.812Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:27.814Z] INFO: Found 2 categories
+[2025-05-27T07:40:27.870Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:40:27.871Z] INFO: Found 2 categories
+[2025-05-27T07:43:33.411Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.412Z] INFO: Found 2 categories
+[2025-05-27T07:43:33.415Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.418Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.477Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.479Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.481Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:33.498Z] INFO: Found 2 categories
+[2025-05-27T07:43:39.195Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:39.197Z] INFO: Found 2 categories
+[2025-05-27T07:43:39.238Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:43:39.239Z] INFO: Found 2 categories
+[2025-05-27T07:46:44.636Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:44.639Z] INFO: Found 2 categories
+[2025-05-27T07:46:44.645Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:44.652Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:44.721Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:44.723Z] INFO: Found 2 categories
+[2025-05-27T07:46:44.725Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:44.728Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:46.115Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:46.133Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:46:46.140Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:46.192Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:46:46.194Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:46:46.197Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:50:59.070Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:50:59.087Z] INFO: Found 2 categories
+[2025-05-27T07:50:59.174Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:50:59.178Z] INFO: Found 2 categories
+[2025-05-27T07:51:00.657Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:00.658Z] INFO: Found 2 categories
+[2025-05-27T07:51:00.661Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:00.664Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:00.715Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:00.717Z] INFO: Found 2 categories
+[2025-05-27T07:51:00.722Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:00.726Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:01.912Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:01.913Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:51:01.916Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:01.967Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:01.969Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:51:01.973Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:10.283Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:10.284Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:51:10.288Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:10.336Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T07:51:10.340Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T07:51:10.344Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.753Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.753Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.781Z] INFO: Found 2 categories
+[2025-05-27T08:03:01.784Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.887Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.887Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.892Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:01.897Z] INFO: Found 2 categories
+[2025-05-27T08:03:02.923Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:02.924Z] INFO: Found 2 categories
+[2025-05-27T08:03:02.955Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:02.956Z] INFO: Found 2 categories
+[2025-05-27T08:03:07.394Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:07.395Z] INFO: Found 2 categories
+[2025-05-27T08:03:07.450Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:07.452Z] INFO: Found 2 categories
+[2025-05-27T08:03:08.259Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.260Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.261Z] INFO: Found 2 categories
+[2025-05-27T08:03:08.262Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.321Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.323Z] INFO: Found 2 categories
+[2025-05-27T08:03:08.327Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.329Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.901Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.903Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T08:03:08.908Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.970Z] INFO: Generating dashboard data for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:08.972Z] INFO: Revenue: 0, Expenses: 1700
+[2025-05-27T08:03:08.977Z] INFO: Dashboard data prepared for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:12.574Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:12.575Z] INFO: Found 2 categories
+[2025-05-27T08:03:12.622Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:03:12.623Z] INFO: Found 2 categories
+[2025-05-27T08:12:45.194Z] INFO: Creating category for user user_2xezh5mqQz77cH6hJ34Xta8qTIt: {"name":"Rent","type":"expense","monthlyTarget":2500}
+[2025-05-27T08:12:45.224Z] INFO: Category created: 8
+[2025-05-27T08:12:45.271Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:45.274Z] INFO: Found 3 categories
+[2025-05-27T08:12:48.454Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.455Z] INFO: Found 3 categories
+[2025-05-27T08:12:48.458Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.460Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.522Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.525Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.526Z] INFO: Fetched 2 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:12:48.543Z] INFO: Found 3 categories
+[2025-05-27T08:13:06.487Z] INFO: Creating transaction for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:06.499Z] INFO: Transaction created with ID: 3 for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:06.551Z] INFO: Fetching transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:06.556Z] INFO: Fetched 3 transactions for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:13.855Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:13.856Z] INFO: Found 3 categories
+[2025-05-27T08:13:13.900Z] INFO: Fetching categories for user: user_2xezh5mqQz77cH6hJ34Xta8qTIt
+[2025-05-27T08:13:13.901Z] INFO: Found 3 categories
+[2025-05-27T09:58:21.420Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:21.447Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T09:58:21.452Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:21.533Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:21.536Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T09:58:21.543Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.326Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.327Z] INFO: Found 0 categories
+[2025-05-27T09:58:28.391Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.393Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.438Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.440Z] INFO: Found 0 categories
+[2025-05-27T09:58:28.453Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:28.455Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:35.368Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:35.369Z] INFO: Found 0 categories
+[2025-05-27T09:58:35.423Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T09:58:35.425Z] INFO: Found 0 categories
+[2025-05-27T10:10:37.065Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:37.082Z] INFO: Found 0 categories
+[2025-05-27T10:10:37.159Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:37.161Z] INFO: Found 0 categories
+[2025-05-27T10:10:48.951Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:48.953Z] INFO: Found 0 categories
+[2025-05-27T10:10:48.955Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:48.959Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:49.005Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:49.007Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:10:49.008Z] INFO: Found 0 categories
+[2025-05-27T10:10:49.010Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:12.698Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:12.700Z] INFO: Found 0 categories
+[2025-05-27T10:11:12.739Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:12.740Z] INFO: Found 0 categories
+[2025-05-27T10:11:23.151Z] INFO: Creating category for user user_2xfrIVl4ETku5DBlItykYQGIgk1: {"name":"Travel Charge","type":"expense","monthlyTarget":2000}
+[2025-05-27T10:11:23.154Z] INFO: Category created: 9
+[2025-05-27T10:11:23.212Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:23.213Z] INFO: Found 1 categories
+[2025-05-27T10:11:33.564Z] INFO: Creating category for user user_2xfrIVl4ETku5DBlItykYQGIgk1: {"name":"Travel Charge","type":"expense","monthlyTarget":2000}
+[2025-05-27T10:11:33.566Z] INFO: Category created: 10
+[2025-05-27T10:11:33.617Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:33.618Z] INFO: Found 2 categories
+[2025-05-27T10:11:58.091Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:58.092Z] INFO: Found 2 categories
+[2025-05-27T10:11:58.124Z] INFO: Fetching categories for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:11:58.126Z] INFO: Found 2 categories
+[2025-05-27T10:24:15.713Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:24:15.715Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:24:15.768Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:24:15.769Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:07.416Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:07.446Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T10:27:07.452Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:07.516Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:07.517Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T10:27:07.522Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:19.506Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:19.508Z] INFO: Revenue: 0, Expenses: 0
+[2025-05-27T10:27:19.511Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:25.571Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:25.573Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:25.625Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:25.626Z] INFO: Fetched 0 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:43.468Z] INFO: Creating transaction for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:43.471Z] INFO: Transaction created with ID: 4 for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:43.519Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:43.521Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:48.114Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:48.115Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T10:27:48.118Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:48.173Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:27:48.175Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T10:27:48.178Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:26.914Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:26.916Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:26.964Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:26.965Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:51.721Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:51.723Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:51.789Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:43:51.793Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:33.601Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:33.607Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:33.659Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:33.662Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:40.740Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:40.743Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:40.792Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:40.796Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:42.253Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:42.258Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:42.319Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:42.324Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:44.871Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:52:44.874Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:10.144Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:10.147Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:10.203Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:10.207Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:45.403Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:45.407Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:45.464Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:45.467Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:51.234Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:51.239Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:51.299Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:53:51.301Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:58:59.211Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:58:59.233Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:58:59.303Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:58:59.305Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:59:02.889Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:59:02.891Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T10:59:02.895Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:59:02.939Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T10:59:02.941Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T10:59:02.945Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:02:46.356Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:02:46.360Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:02:46.419Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:02:46.424Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:06:53.844Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:06:53.873Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:06:53.877Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:06:53.933Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:06:53.934Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:06:53.939Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:08.550Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:08.573Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:17:08.586Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:08.669Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:08.675Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:17:08.681Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:14.258Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:17:14.259Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:17:14.263Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:32:51.023Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:32:51.046Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:32:51.108Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:32:51.111Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:29.187Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:29.306Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:39:29.316Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:36.985Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:36.992Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:37.155Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:37.160Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:43.402Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:43.404Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:39:43.408Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:43.455Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:43.456Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:39:43.460Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:44.981Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:44.985Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:45.048Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:39:45.052Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:15.631Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:15.632Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:40:15.635Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:15.671Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:15.673Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:40:15.677Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:16.949Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:16.953Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:17.017Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:40:17.019Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:52.510Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:52.514Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:52.593Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:52.596Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:53.292Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:53.310Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:49:53.313Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:53.378Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:49:53.380Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:49:53.387Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:50:02.325Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:50:02.328Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:50:02.384Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:50:02.387Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:52:24.612Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:52:24.618Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:52:24.727Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:52:24.737Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:52.022Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:52.024Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:53:52.027Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:52.076Z] INFO: Generating dashboard data for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:52.077Z] INFO: Revenue: 0, Expenses: 1500
+[2025-05-27T11:53:52.081Z] INFO: Dashboard data prepared for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:54.092Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:54.101Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:54.165Z] INFO: Fetching transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1
+[2025-05-27T11:53:54.169Z] INFO: Fetched 1 transactions for user: user_2xfrIVl4ETku5DBlItykYQGIgk1

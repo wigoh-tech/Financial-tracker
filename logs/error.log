@@ -1,1 +1,103 @@
 [2025-05-26T11:28:24.239Z] ERROR: POST /api/categories failed: SyntaxError: Unexpected end of JSON input
+[2025-05-27T02:30:13.274Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:31:12.025Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:31:13.425Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:13.765Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:14.073Z] ERROR: POST /api/categories failed: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create({
+        data: {
+          name: "",
+          type: "expense",
+          monthlyTarget: NaN,
+          userId: "user_2xcPDJH3yOvfikPbM3oalZ3TuDi",
+      +   user: {
+      +     create: UserCreateWithoutCategoriesInput | UserUncheckedCreateWithoutCategoriesInput,
+      +     connectOrCreate: UserCreateOrConnectWithoutCategoriesInput,
+      +     connect: UserWhereUniqueInput
+      +   }
+        }
+      })
+
+Argument `user` is missing.
+[2025-05-27T02:31:44.192Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`
+[2025-05-27T02:38:07.842Z] ERROR: POST /api/categories failed: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create()` invocation in
+/home/user3/ngrok/finance-tracker-project/.next/server/chunks/[root-of-the-server]__977a9c33._.js:292:166
+
+  289 }
+  290 const body = await req.json();
+  291 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$logger$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+→ 292 const category = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].category.create(
+Foreign key constraint violated on the constraint: `Category_userId_fkey`

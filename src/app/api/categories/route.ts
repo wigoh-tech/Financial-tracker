@@ -27,13 +27,20 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    logger.info(`Fetching categories for user: ${userId}`);
+    const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
 
     const categories = await prisma.category.findMany({
-      where: { userId },
+      where: {
+        userId,
+        createdAt: {
+          gte: startOfMonth,
+          lte: endOfMonth,
+        },
+      },
     });
 
-    logger.info(`Found ${categories.length} categories`);
     return NextResponse.json(categories);
   } catch (error) {
     logger.error(`GET /api/categories failed: ${error}`);
@@ -50,24 +57,37 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-    logger.info(`Creating category for user ${userId}: ${JSON.stringify(body)}`);
+    const { name, type, monthlyTarget } = body;
+
+    // Prevent duplicate use of predefined category this month
+    const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const existing = await prisma.category.findFirst({
+      where: {
+        userId,
+        name,
+        createdAt: {
+          gte: startOfMonth,
+        },
+      },
+    });
+
+    if (existing) {
+      return NextResponse.json({ error: 'This category already exists for this month' }, { status: 400 });
+    }
 
     const category = await prisma.category.create({
       data: {
-        name: body.name,
-        type: body.type,
-        monthlyTarget: parseFloat(body.monthlyTarget),
+        name,
+        type,
+        monthlyTarget: parseFloat(monthlyTarget),
         userId,
       },
     });
 
-    logger.info(`Category created: ${category.id}`);
     return NextResponse.json(category);
   } catch (error) {
     logger.error(`POST /api/categories failed: ${error}`);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
-
-
-

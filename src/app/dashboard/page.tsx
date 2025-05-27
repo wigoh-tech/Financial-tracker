@@ -45,10 +45,10 @@ export default function Dashboard() {
   return (
     <div className="p-6 space-y-10">
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         <Card title="Total Revenue" value={`₹${data.totalRevenue}`} bgColor="#F97316" textColor="#ffffff" />
         <Card title="Total Expenses" value={`₹${data.totalExpenses}`} bgColor="#6B21A8" textColor="#ffffff" />
-        <Card title="Net Profit" value={`₹${data.netProfit}`} bgColor="#FACC15" textColor="#1e293b" />
+        {/* <Card title="Net Profit" value={`₹${data.netProfit}`} bgColor="#FACC15" textColor="#1e293b" /> */}
       </div>
 
       {/* Charts */}
@@ -60,13 +60,14 @@ export default function Dashboard() {
           </h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data.monthlyTrends}>
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="revenue" stroke="#F97316" strokeWidth={2} />
-              <Line type="monotone" dataKey="expense" stroke="#6B21A8" strokeWidth={2} />
-            </LineChart>
+                <XAxis dataKey="month" />   
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="linear" dataKey="revenue" stroke="#F97316" strokeWidth={2} />
+                <Line type="step" dataKey="expense" stroke="#6B21A8" strokeWidth={2} />
+              </LineChart>
+
           </ResponsiveContainer>
         </div>
 

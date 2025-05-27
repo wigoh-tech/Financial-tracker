@@ -8,16 +8,15 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  clerkId   String   @unique
-   username     String
-  email     String   @unique
-  firstName String?
-  lastName  String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  clerkId     String       @id // Make Clerk ID the primary key
+  username    String
+  email       String       @unique
+  firstName   String?
+  lastName    String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
 
-    categories   Category[]
+  categories  Category[]
   transactions Transaction[]
 }
 
@@ -26,9 +25,10 @@ model Category {
   name          String
   createdAt     DateTime      @default(now())
   monthlyTarget Float         @default(0)
+  recurrence    String     @default("monthly") // "monthly" or "weekly"
   type          String        @default("expense")
   userId        String
-  user          User          @relation(fields: [userId], references: [id])
+  user          User          @relation(fields: [userId], references: [clerkId]) // ✅ FIXED
   transactions  Transaction[]
 }
 
@@ -44,6 +44,6 @@ model Transaction {
   isRecurring Boolean   @default(false)
   recurrence  String?
   userId      String
-  user        User      @relation(fields: [userId], references: [id])
+  user        User      @relation(fields: [userId], references: [clerkId]) // ✅ FIXED
   category    Category? @relation(fields: [categoryId], references: [id])
 }

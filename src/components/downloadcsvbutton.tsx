@@ -30,7 +30,7 @@ export default function DownloadCSVButton({ month }: { month: string }) {
   return (
     <button
       onClick={handleDownload}
-      className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+      className="px-4 py-2 bg-[rgb(212,219,106)] text-black rounded hover:bg-lightblue-700 disabled:opacity-50"
       disabled={loading}
     >
       {loading ? 'Downloading...' : `Download CSV for ${month}`}
